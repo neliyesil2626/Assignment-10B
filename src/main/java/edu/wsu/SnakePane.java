@@ -200,7 +200,6 @@ public class SnakePane extends Application {
   }
 
   private void hitScreen(Stage stage, Pane pane){
-    //TODO
     if( (snake.get(0).getCenterX() <= radius && direction == 3) || (snake.get(0).getCenterX() >= width - radius && direction == 2)
         || (snake.get(0).getCenterY() <= radius && direction == 0) || (snake.get(0).getCenterY() >= height - radius && direction == 1) ){ //snake has hit edge
       try{
@@ -221,7 +220,6 @@ public class SnakePane extends Application {
   }
 
   private void hitSelf(Stage stage, Pane pane){
-    //TODO
     for(int i = 1; i < snake.size(); i++){
       if(snake.get(0).getCenterX() == snake.get(i).getCenterX() && snake.get(0).getCenterY() == snake.get(i).getCenterY()){
         try{
@@ -288,8 +286,6 @@ public class SnakePane extends Application {
   }
 
   public void end(Stage stage, Pane pane) throws IOException {
-    //TODO
-
     time.stop();
 
     App.setName(name);
