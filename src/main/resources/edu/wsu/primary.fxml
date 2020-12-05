@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wsu.PrimaryController">
@@ -18,30 +19,84 @@
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.20001220703125" minWidth="10.0" prefWidth="67.5999755859375" />
   </columnConstraints>
   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label prefHeight="32.0" prefWidth="171.0" text="Player Name" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+      <Label prefHeight="32.0" prefWidth="171.0" text="Player Name" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
          <font>
             <Font name="Arial" size="28.0" />
          </font></Label>
-      <Label prefHeight="32.0" prefWidth="178.0" text="Snake Length" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+      <Label prefHeight="32.0" prefWidth="178.0" text="Snake Length" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
          <font>
             <Font name="Arial" size="28.0" />
          </font></Label>
-      <Label prefHeight="32.0" prefWidth="162.0" text="Snake Color" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+      <Label prefHeight="32.0" prefWidth="162.0" text="Snake Color" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
          <font>
             <Font name="Arial" size="28.0" />
          </font>
          <GridPane.margin>
             <Insets />
          </GridPane.margin></Label>
-      <ComboBox fx:id="snakeLength" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-      <ColorPicker fx:id="snakeColor" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-      <Button fx:id="startButton" mnemonicParsing="false" onAction="#startGame" text="Start" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <TextField fx:id="playerName" prefHeight="26.0" prefWidth="296.0" GridPane.columnIndex="1" />
+      <ComboBox fx:id="snakeLength" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <ColorPicker fx:id="snakeColor" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <value>
+           <Color blue="0.0" green="1.0" red="0.0" />
+         </value>
+     </ColorPicker>
+      <Button fx:id="startButton" mnemonicParsing="false" onAction="#startGame" text="Start" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+      <TextField fx:id="playerName" prefHeight="26.0" prefWidth="296.0" promptText="name of snake" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label prefHeight="32.0" prefWidth="240.0" text="Snake Head Color" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+         <font>
+            <Font name="Arial" size="28.0" />
+         </font>
+      </Label>
+      <Label prefHeight="32.0" prefWidth="221.0" text="Number of Fruits" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+         <font>
+            <Font name="Arial" size="28.0" />
+         </font>
+      </Label>
+      <Label prefHeight="32.0" prefWidth="162.0" text="Fruit Color" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+         <font>
+            <Font name="Arial" size="28.0" />
+         </font>
+      </Label>
+      <Label prefHeight="32.0" prefWidth="162.0" text="Grid Width" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+         <font>
+            <Font name="Arial" size="28.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="gridHeight" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+      <Label prefHeight="32.0" prefWidth="162.0" text="Grid Height" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+         <font>
+            <Font name="Arial" size="28.0" />
+         </font>
+      </Label>
+      <ColorPicker fx:id="fruitColor" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+        <value>
+          <Color blue="0.0" green="0.0" red="1.0" />
+        </value>
+      </ColorPicker>
+      <ColorPicker fx:id="snakeHeadColor" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+        <value>
+          <Color blue="0.0" green="0.0" red="1.0" />
+        </value>
+      </ColorPicker>
+      <ComboBox fx:id="numberOfFruits" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+      <ComboBox fx:id="gridWidth" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+      <Label fx:id="settings" prefHeight="32.0" prefWidth="171.0" text="Settings" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Cooper Black" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#stopGame" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
    </children>
 </GridPane>
